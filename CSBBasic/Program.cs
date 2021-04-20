@@ -33,6 +33,9 @@ namespace CSBBasic
              comment
              */
 
+            Console.Write("이건 안개형");
+            Console.Write("입니다");
+            Console.WriteLine("");
             Console.WriteLine("Hello");
         }
     }
