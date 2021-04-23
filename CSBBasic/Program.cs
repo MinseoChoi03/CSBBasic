@@ -153,7 +153,6 @@ namespace CSBBasic
 
             //증감 연산자 - 섞어서 쓸 경우
             //전위, 호위에 따라서 출력 값이 변할 수 있으니 주의
-
             int num = 10;
             Console.WriteLine(num++);
             Console.WriteLine(++num);
@@ -167,6 +166,19 @@ namespace CSBBasic
             output3 = output3 + "?!";
             Console.WriteLine(output3);
 
+            int _int = 273;
+            long _long = 5276515354;
+            float _float = 5.2F;
+            double _double = 2.564845;
+            char _char = 'C';
+            string _string = "strig";
+
+            Console.WriteLine(_int.GetType());
+            Console.WriteLine(_long.GetType());
+            Console.WriteLine(_float.GetType());
+            Console.WriteLine(_double.GetType());
+            Console.WriteLine(_char.GetType());
+            Console.WriteLine(_string.GetType());
         }
     }
 }
