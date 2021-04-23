@@ -186,6 +186,18 @@ namespace CSBBasic
             Console.WriteLine(somea.GetType());
             Console.WriteLine(someb.GetType());
             Console.WriteLine(somec.GetType());
+
+            bool isLoop = true;
+            string input;
+            while (isLoop)
+            {
+                Console.Write("입력 > ");
+                input = Console.ReadLine();
+                if (input.Equals("1"))
+                    break;
+                else
+                    Console.WriteLine(input);
+            }
         }
     }
 }
