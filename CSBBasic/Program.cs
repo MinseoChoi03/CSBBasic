@@ -179,6 +179,13 @@ namespace CSBBasic
             Console.WriteLine(_double.GetType());
             Console.WriteLine(_char.GetType());
             Console.WriteLine(_string.GetType());
+
+            var somea = "문자열 입니다";
+            var someb = 2354;
+            var somec = 2.56848;
+            Console.WriteLine(somea.GetType());
+            Console.WriteLine(someb.GetType());
+            Console.WriteLine(somec.GetType());
         }
     }
 }
