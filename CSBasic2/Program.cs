@@ -60,6 +60,32 @@ namespace CSBasic2
             {
                 Console.WriteLine("시대를 앞서가는 혁명의 씨앗");
             }
+
+            Console.Write("이번 달은 몇 월인가요?");
+            int input = int.Parse(Console.ReadLine());
+
+            switch (input)
+            {
+                case 12: case 1: case 2:
+                    Console.WriteLine("Winter");
+                    break;
+
+                case 3: case 4: case 5:
+                    Console.WriteLine("Spring");
+                    break;
+
+                case 6: case 7: case 8:
+                    Console.WriteLine("Summer");
+                    break;
+
+                case 9: case 10: case 11:
+                    Console.WriteLine("Autumn");
+                    break;
+
+                default:
+                    Console.WriteLine("지구에 있는 거 맞나요?");
+                    break;
+            }
         }
     }
 }
