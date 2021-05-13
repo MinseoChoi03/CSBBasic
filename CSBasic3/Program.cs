@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSBasic3
@@ -21,11 +22,11 @@ namespace CSBasic3
 
             int i = 0;
             int[] intArray2 = { 52, 273, 32, 65, 103 };
-            while(i < intArray.Length)
+            /*while(i < intArray.Length)
             {
                 Console.WriteLine(i + "번째 출력 : " + intArray2[i]);
                 i++;
-            }
+            }*/
 
             string input;
             do
@@ -66,6 +67,88 @@ namespace CSBasic3
                     Console.WriteLine(" ★ ");
                 }
                 Console.WriteLine();
+            }
+
+            //대소문자 변환
+            string input3 = "Potato Tomato";
+            Console.WriteLine(input3.ToUpper());
+            Console.WriteLine(input3.ToLower());
+            input3.ToLower(); //헛고생
+            Console.WriteLine(input3);//그대로 출력 됨
+
+            string foods = "감자 고구마 토마토";
+            string[] foodsArray = foods.Split(new char[] { ' ' });
+            foreach(var item in foodsArray)
+            {
+                Console.WriteLine(item);
+            }
+
+            //환경변수의 path텍스트 값을 가져와서 \를 \\로 치환해서 넣어준다.
+            string path = "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath";
+            string[] paths = path.Split(new char[] { ' ' });
+            foreach (var item in paths)
+            {
+                Console.WriteLine(item);
+            }
+
+            string dirtyInput = "text um \n\t";
+            Console.WriteLine("[" + dirtyInput + "]");
+            Console.WriteLine("[" + dirtyInput.Trim() + "]");
+
+            string[] foodsArray2 = { "감자", "고구마", "토마토", "가지" };
+            Console.WriteLine(string.Join("  ", foodsArray2));// space 2개
+            Console.WriteLine(string.Join(",", foodsArray2));
+            Console.WriteLine(string.Join(";", foodsArray2));
+            Console.WriteLine(string.Join(" ", foodsArray2));// tab
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[      ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[#     ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[##     ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[###   ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[####  ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[#####  ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[###### ]");
+            Thread.Sleep(1000);
+
+            Console.SetCursorPosition(1, 1);
+            Console.WriteLine("[#######]");
+            Thread.Sleep(1000);
+
+
+            int x = 1;
+            while(x < 50)
+            {
+                Console.Clear();
+                Console.SetCursorPosition(x, 5);
+
+                if (x % 3 == 0)
+                    Console.WriteLine("___@");
+                else if (x % 3 == 1)
+                    Console.WriteLine("__'@");
+                else
+                    Console.WriteLine("'_@");
+
+                Thread.Sleep(1000);
+                x++;
             }
         }
     }
