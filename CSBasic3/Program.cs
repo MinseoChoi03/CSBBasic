@@ -54,6 +54,19 @@ namespace CSBasic3
             {
                 Console.WriteLine(fruit);
             }
+
+            for(i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10 - 1; j++)
+                {
+                    Console.WriteLine(" ");
+                }
+                for (int j = 0; j < i + 1; j++)
+                {
+                    Console.WriteLine(" ★ ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
