@@ -52,7 +52,18 @@ namespace Chapter6_FormPrac
 
         private void btnModeless_Click(object sender, EventArgs e)
         {
+            Form form = new FormCustom();
+            IsMdiContainer = true;
 
+            if(sender == btnModeless)
+            {
+                form.Show();
+                form.MdiParent = this;
+            }
+            else if(sender == btnModal)
+            {
+                form.ShowDialog();
+            }
         }
     }
 }
