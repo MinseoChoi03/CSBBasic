@@ -8,7 +8,7 @@ namespace CSBasic7
 {
     class Products
     {
-        private List<string>list;
+        private List<string> list = new List<string>();
         public Products()
         {
             list.Add("탕수육");
@@ -26,6 +26,17 @@ namespace CSBasic7
     }
     class Program
     {
+        struct Point
+        {
+            public int x;
+            public int y;
+        }
+        static void NextPosition(int x, int y, int vx, int vy,
+            out int rx, out int ry)
+        {
+            rx = x + vx;
+            ry = y + vy;
+        }
         class Wanted<T>
             //where T : Student
         {
@@ -44,6 +55,30 @@ namespace CSBasic7
         }
         static void Main(string[] args)
         {
+            Point point;
+            point.x = 10;
+            point.y = 10;
+
+            int x = 0;
+            int y = 0;
+            int vx = 1;
+            int vy = 1;
+            Console.WriteLine("현재 좌표 : " + x + "," + y);
+            NextPosition(x, y, vx, vy, out x, out y);
+            Console.WriteLine("다음 좌표 : " + x + "," + y);
+
+            Console.Write("숫자 입력 : ");
+            int output;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+            if (result)
+            {
+                Console.WriteLine("변환 성공 : " + output);
+            }
+            else
+            {
+                Console.WriteLine("변환 실패 : " + output);
+            }
+
             Products ps = new Products();
             Random rs = new Random();
             int i = rs.Next(0, 6);
